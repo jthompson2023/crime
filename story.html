@@ -28,24 +28,24 @@ Your mother and sister live impoverished in the countryside. They send you money
 You have a job to do. 
 
 [[Walk towards your destination|The apartment building]]
-(if:(history: where its name contains &quot;The tavern&quot;)&#39;s length &lt; 1)[[Get something to eat|The tavern]]</tw-passagedata><tw-passagedata pid="4" name="The tavern" tags="" position="1225,650" size="100,100">You&#39;ve never spent much time in taverns. They&#39;re loud, filthy, and diseased, and you don&#39;t like crowds. But today, you&#39;re hungry and thirsty and for the first time in your life, you feel a need to be with other people. You drink and eat, and begin to feel a bit better.
+(if:(history: where its name contains &quot;The tavern&quot;)&#39;s length &lt; 1)[[Get something to eat|The tavern]]</tw-passagedata><tw-passagedata pid="4" name="The tavern" tags="" position="1250,625" size="100,100">You&#39;ve never spent much time in taverns. They&#39;re loud, filthy, and diseased, and you don&#39;t like crowds. But today, you&#39;re hungry and thirsty and for the first time in your life, you feel a need to be with other people. You drink and eat, and begin to feel a bit better.
 
 (set: $Fever to $Fever - 1)
 &#39;&#39;Fever has decreased by one.&#39;&#39;
 
 There is a strange man staring at you.
 
-[[Next|A stranger]]</tw-passagedata><tw-passagedata pid="5" name="The apartment building" tags="" position="1000,550" size="100,100">Nobody in Petersburg has their own house. You wander over to a massive building crammed with tiny apartments. It takes exactly 730 steps; you&#39;ve counted. 
+[[Next|A stranger]]</tw-passagedata><tw-passagedata pid="5" name="The apartment building" tags="" position="1000,525" size="100,100">Nobody in Petersburg has their own house. You wander over to a massive building crammed with tiny apartments. It takes exactly 730 steps; you&#39;ve counted. 
 
 As you ascend the stairway to the pawnbroker&#39;s place, you notice you&#39;re shaking. You&#39;re only scouting the place out, and you&#39;re already so afraid. Do you really have the courage for this?
 
-[[Go on.|Outside the pawnbroker&#39;s apartment]]</tw-passagedata><tw-passagedata pid="6" name="Outside the pawnbroker&#39;s apartment" tags="" position="875,600" size="100,100">You reach the floor, stepping around some movers who are packing up the flat next door, and knock.
+[[Go on.|Outside the pawnbroker&#39;s apartment]]</tw-passagedata><tw-passagedata pid="6" name="Outside the pawnbroker&#39;s apartment" tags="" position="875,525" size="100,100">You reach the floor, stepping around some movers who are packing up the flat next door, and knock.
 
 Silence.
 
 Then the door cracks open, and a tiny, wrinkled woman with a hard glare looks you up and down and beckons you inside.
 
-[[Enter|Alyona Ivanovna]]</tw-passagedata><tw-passagedata pid="7" name="Alyona Ivanovna" tags="" position="875,650" size="100,100">This is Alyona Ivanovna, the old pawnbroker.  She is mean, stingy, suspicious, and quiet. She beats her sister, extorts her clients, and hoards away her money to be donated to a distant monestary when she dies—to buy her way into heaven.
+[[Enter|Alyona Ivanovna]]</tw-passagedata><tw-passagedata pid="7" name="Alyona Ivanovna" tags="" position="875,575" size="100,100">This is Alyona Ivanovna, the old pawnbroker.  She is mean, stingy, suspicious, and quiet. She beats her sister, extorts her clients, and hoards away her money to be donated to a distant monestary when she dies—to buy her way into heaven.
 
 You&#39;re say you&#39;re here to sell your father&#39;s watch, his last gift before he died.
 
@@ -54,7 +54,7 @@ You&#39;re really here to find out where she keeps her money. As she goes to fet
 You need to know if she lives alone. Dare you ask?
 
 [[Ask her.]]
-[[Stay silent.|Back outside]]</tw-passagedata><tw-passagedata pid="8" name="Ask her." tags="" position="900,775" size="100,100">//
+[[Stay silent.|Back outside]]</tw-passagedata><tw-passagedata pid="8" name="Ask her." tags="" position="875,700" size="100,100">//
 
 “Good-bye—are you always at home alone, your sister is not here with you?” He asked her as casually as possible as he went out into the passage.
 
@@ -65,7 +65,7 @@ You need to know if she lives alone. Dare you ask?
 (set:$Suspicion to $Suspicion + 1)
 &#39;&#39;Suspicion has increased by 1.&#39;&#39;
 
-[[Exit|Back outside]]</tw-passagedata><tw-passagedata pid="9" name="Back outside" tags="" position="1050,725" size="100,100">As soon as you leave, you almost collapse from stress and revulsion. Are you seriously considering this? Is she actually going to die at your hands?
+[[Exit|Back outside]]</tw-passagedata><tw-passagedata pid="9" name="Back outside" tags="" position="1000,700" size="100,100">As soon as you leave, you almost collapse from stress and revulsion. Are you seriously considering this? Is she actually going to die at your hands?
 
 Are you really capable of murder?
 
@@ -79,7 +79,7 @@ Are you really capable of murder?
  (set: $Suspicion to 0)
  (set: $Fever to 2)
  (set: $Apathy to 1)
-</tw-passagedata><tw-passagedata pid="11" name="I need to go home." tags="" position="1050,925" size="100,100">(if:(history: where its name contains &quot;Marmeladov&quot;)&#39;s length is 1)[The drunk man&#39;s words are still ringing in your ears: //“Do you understand, sir, do you understand what it means when you have absolutely nowhere to turn? For every man must have somewhere to turn....”//
+</tw-passagedata><tw-passagedata pid="11" name="I need to go home." tags="" position="975,925" size="100,100">(if:(history: where its name contains &quot;Marmeladov&quot;)&#39;s length is 1)[The drunk man&#39;s words are still ringing in your ears: //“Do you understand, sir, do you understand what it means when you have absolutely nowhere to turn? For every man must have somewhere to turn....”//
 ]
 (if:(history: where its name contains &quot;Alyona Ivanovna&quot;)&#39;s length is 1)[You&#39;re still shaken by what you&#39;ve done. What you might still do. You can&#39;t get the suspicious glare of the pawnbroker out of your mind.
 (set: $Fever to $Fever + 1)
@@ -98,13 +98,13 @@ Are you really capable of murder?
 &#39;May I venture, honoured sir, to engage you in polite conversation?&#39;&quot;//
 
 [[Talk to him.|Marmeladov]]
-[[Leave without a word.]]</tw-passagedata><tw-passagedata pid="13" name="Leave without a word." tags="" position="1175,825" size="100,100">You have no friends, no allies, nobody who can comprehend your life.
+[[Leave without a word.]]</tw-passagedata><tw-passagedata pid="13" name="Leave without a word." tags="" position="1125,675" size="100,100">You have no friends, no allies, nobody who can comprehend your life.
 
 (set: $Apathy to $Apathy + 1)
 &#39;&#39;Apathy has increased by 1.&#39;&#39;
 
 (if:(history: where its name contains &quot;Alyona Ivanovna&quot;)&#39;s length &lt; 1)[[I still have a job to do.|The apartment building]]
-[[I need to go home.]]</tw-passagedata><tw-passagedata pid="14" name="Marmeladov" tags="" position="1325,925" size="100,100">His name is Semyon Zaharovitch Marmeladov, a retired government clerk. He has drunk his impoverished family into squalor, leaving a wife half-mad with consumption and a daughter forced to go into sex work. But you can tell he doesn&#39;t fit in among this sordid crowd. Beneath his shabbiness and intoxication, there is an intelligent man longing for an intelligent friend.
+[[I need to go home.]]</tw-passagedata><tw-passagedata pid="14" name="Marmeladov" tags="" position="1200,800" size="100,100">His name is Semyon Zaharovitch Marmeladov, a retired government clerk. He has drunk his impoverished family into squalor, leaving a wife half-mad with consumption and a daughter forced to go into sex work. But you can tell he doesn&#39;t fit in among this sordid crowd. Beneath his shabbiness and intoxication, there is an intelligent man longing for an intelligent friend.
 
 You help him get home.
 
@@ -113,7 +113,7 @@ You help him get home.
 
 (if:(history: where its name contains &quot;Alyona Ivanovna&quot;)&#39;s length &lt; 1)[[I still have a job to do.|The apartment building]]
 
-[[Time to head home.|I need to go home.]]</tw-passagedata><tw-passagedata pid="15" name="The letter" tags="" position="925,1025" size="100,100">It&#39;s from your family! With shaky hands, you read your mother&#39;s slanting script.
+[[Time to head home.|I need to go home.]]</tw-passagedata><tw-passagedata pid="15" name="The letter" tags="" position="975,975" size="100,100">It&#39;s from your family! With shaky hands, you read your mother&#39;s slanting script.
 
 Your sister is home from serving as a governess to the Svidrigaïlov family—it seems Mr. Svidrigaïlov took an unsavory interest in her. But the lady of the house took pity on her, and has arranged for her to meet a new suitor:
 
@@ -129,20 +129,22 @@ Oh, with what happiness I shall press you to my heart! Dounia is all excitement 
 
 You collapse in despair.
 
-[[Next|This is bad]]</tw-passagedata><tw-passagedata pid="16" name="This is bad" tags="" position="925,1150" size="100,100">However your mother may try to disguise it, you see what&#39;s going on here. They know you can&#39;t afford your tuition. They know her pension won&#39;t be enough once mother gets too old to take care of herself.
+[[Next|This is bad]]</tw-passagedata><tw-passagedata pid="16" name="This is bad" tags="" position="975,1000" size="100,100">However your mother may try to disguise it, you see what&#39;s going on here. They know you can&#39;t afford your tuition. They know her pension won&#39;t be enough once mother gets too old to take care of herself.
 
 Your sister has resigned herself to marry a rotten man to save you, and there&#39;s nothing you can do about it.
 (if:$Apathy &lt; 3)[
 …No. There is something.
-//To be continued.//
+	(if:(history: where its name contains &quot;Marmeladov&quot;)&#39;s length &gt;= 1)[[Marmeladov. He needs me.]]
+	(if:$Apathy &lt; 1)[ [[I have a friend in the city.]]](else:)[(text-colour:grey)[~~I have a friend in the city.~~]  &#39;&#39;Your apathy is too high for this option.&#39;&#39;]
+[[I can carry out the job.]]
 ]
 (else:)[
 [[Your apathy overwhelms you.]]
-]</tw-passagedata><tw-passagedata pid="17" name="Your apathy overwhelms you." tags="" position="1075,1150" size="100,100">//&quot;But since I grew to manhood, I have for some unknown reason become calmer, though I realised my awful characteristic more fully every year. I say &quot;unknown,&quot; for to this day I cannot tell why it was. Perhaps it was owing to the terrible misery that was growing in my soul through something which was of more consequence than anything else about me: that something was the conviction that had come upon me that nothing in the world mattered. I had long had an inkling of it, but the full realisation came last year almost suddenly. I suddenly felt that it was all the same to me whether the world existed or whether there had never been anything at all: I began to feel with all my being that there was nothing existing. At first I fancied that many things had existed in the past, but afterwards I guessed that there never had been anything in the past either, but that it had only seemed so for some reason. Little by little I guessed that there would be nothing in the future either. Then I left off being angry with people and almost ceased to notice them. Indeed this showed itself even in the pettiest trifles: I used, for instance, to knock against people in the street. And not so much from being lost in thought: what had I to think about? I had almost given up thinking by that time; nothing mattered to me. If at least I had solved my problems! Oh, I had not settled one of them, and how many they were! But I gave up caring about anything, and all the problems disappeared.&quot;//
+]</tw-passagedata><tw-passagedata pid="17" name="Your apathy overwhelms you." tags="" position="1125,1000" size="100,100">//&quot;But since I grew to manhood, I have for some unknown reason become calmer, though I realised my awful characteristic more fully every year. I say &quot;unknown,&quot; for to this day I cannot tell why it was. Perhaps it was owing to the terrible misery that was growing in my soul through something which was of more consequence than anything else about me: that something was the conviction that had come upon me that nothing in the world mattered. I had long had an inkling of it, but the full realisation came last year almost suddenly. I suddenly felt that it was all the same to me whether the world existed or whether there had never been anything at all: I began to feel with all my being that there was nothing existing. At first I fancied that many things had existed in the past, but afterwards I guessed that there never had been anything in the past either, but that it had only seemed so for some reason. Little by little I guessed that there would be nothing in the future either. Then I left off being angry with people and almost ceased to notice them. Indeed this showed itself even in the pettiest trifles: I used, for instance, to knock against people in the street. And not so much from being lost in thought: what had I to think about? I had almost given up thinking by that time; nothing mattered to me. If at least I had solved my problems! Oh, I had not settled one of them, and how many they were! But I gave up caring about anything, and all the problems disappeared.&quot;//
 —The Dream of a Ridiculous Man
 
 &#39;&#39;Your story has come to an end.&#39;&#39;
-[[Begin again.]]</tw-passagedata><tw-passagedata pid="18" name="Begin again." tags="" position="1200,1125" size="100,100">(reload:)</tw-passagedata></tw-storydata>
+[[Begin again.]]</tw-passagedata><tw-passagedata pid="18" name="Begin again." tags="" position="1275,1000" size="100,100">(reload:)</tw-passagedata><tw-passagedata pid="19" name="Marmeladov. He needs me." tags="" position="950,1175" size="100,100"></tw-passagedata><tw-passagedata pid="20" name="I can carry out the job." tags="" position="825,1125" size="100,100"></tw-passagedata><tw-passagedata pid="21" name="I have a friend in the city." tags="" position="1100,1125" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

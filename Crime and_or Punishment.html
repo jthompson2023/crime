@@ -37,7 +37,7 @@ There is a strange man staring at you.
 
 As you ascend the stairway to the pawnbroker&#39;s place, you notice you&#39;re shaking. You&#39;re only scouting the place out, and you&#39;re already so afraid. Do you really have the courage for this?
 
-[[Go on.||Outside the pawnbroker&#39;s apartment]]</tw-passagedata><tw-passagedata pid="6" name="Outside the pawnbroker&#39;s apartment" tags="" position="875,600" size="100,100">You reach the floor, stepping around some movers who are packing up the flat next door, and knock.
+[[Go on.|Outside the pawnbroker&#39;s apartment]]</tw-passagedata><tw-passagedata pid="6" name="Outside the pawnbroker&#39;s apartment" tags="" position="875,600" size="100,100">You reach the floor, stepping around some movers who are packing up the flat next door, and knock.
 
 Silence.
 
@@ -77,16 +77,17 @@ Are you really capable of murder?
  (set: $Suspicion to 0)
  (set: $Fever to 2)
  (set: $Apathy to 1)
-</tw-passagedata><tw-passagedata pid="11" name="I need to go home." tags="" position="1050,950" size="100,100">(if:(history: where its name contains &quot;Marmeladov&quot;)&#39;s length is 1)[The drunk man&#39;s words are still ringing in your ears: //“Do you understand, sir, do you understand what it means when you have absolutely nowhere to turn? For every man must have somewhere to turn....”//
+</tw-passagedata><tw-passagedata pid="11" name="I need to go home." tags="" position="1050,925" size="100,100">(if:(history: where its name contains &quot;Marmeladov&quot;)&#39;s length is 1)[The drunk man&#39;s words are still ringing in your ears: //“Do you understand, sir, do you understand what it means when you have absolutely nowhere to turn? For every man must have somewhere to turn....”//
 ]
 (if:(history: where its name contains &quot;Alyona Ivanovna&quot;)&#39;s length is 1)[You&#39;re still shaken by what you&#39;ve done. What you might still do. You can&#39;t get the suspicious glare of the pawnbroker out of your mind.
-
 (set: $Fever to $Fever + 1)
 &#39;&#39;Fever has increased by 1.&#39;&#39;
 ]
 (else:)[You came out to do a job. You&#39;ve returned, and nothing has changed. And you may go out again, and still nothing will change. When you can&#39;t trust yourself to change, what else can?
 (set: $Apathy to $Apathy + 1)
 &#39;&#39;Apathy has increased by 1.&#39;&#39;]
+
+[[There is a letter here for you.|The letter]]
 
 </tw-passagedata><tw-passagedata pid="12" name="A stranger" tags="" position="1325,750" size="100,100">//&quot;He was a man over fifty, bald and grizzled, of medium height, and stoutly built. His face, bloated from continual drinking, was of a yellow, even greenish, tinge, with swollen eyelids out of which keen reddish eyes gleamed like little chinks. But there was something very strange in him; there was a light in his eyes as though of intense feeling—perhaps there were even thought and intelligence, but at the same time there was a gleam of something like madness. He was wearing an old and hopelessly ragged black dress coat, with all its buttons missing except one, and that one he had buttoned, evidently clinging to this last trace of respectability. And there was something respectable and like an official about his manner too. But he was restless; he ruffled up his hair and from time to time let his head drop into his hands dejectedly resting his ragged elbows on the stained and sticky table. At last he looked straight at Raskolnikov, and said loudly and resolutely:
 
@@ -108,7 +109,21 @@ You help him get home.
 
 (if:(history: where its name contains &quot;Alyona Ivanovna&quot;)&#39;s length &lt; 1)[[I still have a job to do.|The apartment building]]
 
-[[Time to head home.|I need to go home.]]</tw-passagedata></tw-storydata>
+[[Time to head home.|I need to go home.]]</tw-passagedata><tw-passagedata pid="15" name="The letter" tags="" position="925,1025" size="100,100">It&#39;s from your family! With shaky hands, you read your mother&#39;s slanting script.
+
+Your sister is home from serving as a governess to the Svidrigaïlov family—it seems Mr. Svidrigaïlov took an unsavory interest in her. But the lady of the house took pity on her, and has arranged for her to meet a new suitor:
+
+//&quot;He is a well-to-do man, to be depended upon, he has two posts in the government and has already made his fortune. It is true that he is forty-five years old, but he is of a fairly prepossessing appearance and might still be thought attractive by women, and he is altogether a very respectable and presentable man, only he seems a little morose and somewhat conceited. But possibly that may only be the impression he makes at first sight. And beware, dear Rodya, when he comes to Petersburg, as he shortly will do, beware of judging him too hastily and severely, as your way is, if there is anything you do not like in him at first sight. …For instance, at his second visit, after he had received Dounia’s consent, in the course of conversation, he declared that before making Dounia’s acquaintance, he had made up his mind to marry a girl of good reputation, without dowry and, above all, one who had experienced poverty, because, as he explained, a man ought not to be indebted to his wife, but that it is better for a wife to look upon her husband as her benefactor. I must add that he expressed it more nicely and politely than I have done, for I have forgotten his actual phrases and only remember the meaning.
+
+Oh, with what happiness I shall press you to my heart! Dounia is all excitement at the joyful thought of seeing you, she said one day in joke that she would be ready to marry Pyotr Petrovitch for that alone. She is an angel! She is not writing anything to you now, and has only told me to write that she has so much, so much to tell you that she is not going to take up her pen now, for a few lines would tell you nothing, and it would only mean upsetting herself; she bids me send you her love and innumerable kisses.
+
+…I would send you more, but I am uneasy about our travelling expenses; for though Pyotr Petrovitch has been so kind as to undertake part of the expenses of the journey, that is to say, he has taken upon himself the conveyance of our bags and big trunk (which will be conveyed through some acquaintances of his), we must reckon upon some expense on our arrival in Petersburg, where we can’t be left without a halfpenny, at least for the first few days. But we have calculated it all, Dounia and I, to the last penny, and we see that the journey will not cost very much. …Good-bye, till we meet then—I embrace you warmly, warmly, with many kisses.
+
+“Yours till death,
+
+“PULCHERIA RASKOLNIKOV.” //
+
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim

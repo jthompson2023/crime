@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Crime and/or Punishment
+</title>
+<meta charset="utf-8">
+<style>
+body
+{
+	font: 10pt Cousine, monospace;
+	margin: 2em;
+}
+
+h1
+{
+	font-size: 14pt;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+tw-storydata
+{
+	display: block !important;
+}
+
+tw-passagedata
+{
+	display: block !important;
+	line-height: 200%;
+	margin-bottom: 2em;
+	white-space: pre-wrap;
+}
+
+tw-passagedata + tw-passagedata
+{
+	border-top: 1pt dashed black;
+	padding-top: 2em;
+}
+
+tw-passagedata:before
+{
+	content: attr(name);
+	display: block;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Crime and/or Punishment
+</h1>
+<tw-storydata name="Crime and/or Punishment" startnode="10" creator="Twine" creator-version="2.6.2" format="Harlowe" format-version="3.3.5" ifid="9D37C7B5-C5DD-4E69-8CC7-6503B07A2952" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+    display: none;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Saint Petersburg" tags="" position="1000,400" size="100,100">Russia, sometime in the 1860s. Swirls of liberation, burgeoning science, progressivism, egoism, and nihilism, clamor for attention beneath the towering might of the Russian military elite.&lt;sup&gt;1&lt;/sup&gt;
+
+St. Petersburg is  the captial and microcosm of Russia&#39;s contradictions—&quot;the most abstract and premeditated city in the whole world.&quot; A towering captial built on a fetid, flooding, alternately sweltering and freezing swamp, because Peter the Great decided Russia needed a port city.
+
+Poverty and riches. Order and chaos. Anything can happen in St. Petersburg.
+
+[[Begin.|You are Raskolnikov]]</tw-passagedata><tw-passagedata pid="2" name="You are Raskolnikov" tags="" position="1125,400" size="100,100">You are &#39;&#39;Rodion Romanovitch Raskolnikov&#39;&#39;, a law student in the city.
+
+You have not eaten in days.
+
+Your mother and sister live impoverished in the countryside. They send you money from time to time, but you can&#39;t afford any more lessons. You live in an apartment—barely a closet—in rags and disarray. You&#39;ve done nothing but lie there and stew in your own thoughts for weeks now. In some distant corner of your mind, you&#39;re aware that you have a fever.
+
+[[Go out]]</tw-passagedata><tw-passagedata pid="3" name="Go out" tags="" position="1125,525" size="100,100">The oppressive heat of a Petersburg summer and the stench of refuse and misery from the Hay Market does not help your fever, but you hardly notice. 
+
+You have a job to do.
+
+[[Walk towards your destination|The apartment building]]
+(if:(history: where its name contains &quot;The tavern&quot;)&#39;s length &lt; 1)[[Get something to eat|The tavern]]</tw-passagedata><tw-passagedata pid="4" name="The tavern" tags="" position="1250,625" size="100,100">You&#39;ve never spent much time in taverns. They&#39;re loud, filthy, and diseased, and you don&#39;t like crowds. But today, you&#39;re hungry and thirsty and for the first time in your life, you feel a need to be with other people. You drink and eat, and begin to feel a bit better.
+
+(set: $Fever to $Fever - 1)
+&#39;&#39;Fever has decreased by one.&#39;&#39;
+
+There is a strange man staring at you.
+
+[[Next|A stranger]]</tw-passagedata><tw-passagedata pid="5" name="The apartment building" tags="" position="1000,525" size="100,100">Nobody in Petersburg has their own house.&lt;sup&gt;22&lt;/sup&gt; You wander over to a massive building crammed with tiny apartments. It takes exactly 730 steps; you&#39;ve counted. 
+
+As you ascend the stairway to the pawnbroker&#39;s place, you notice you&#39;re shaking. You&#39;re only scouting the place out, and you&#39;re already so afraid. Do you really have the courage for this?
+
+[[Go on.|Outside the pawnbroker&#39;s apartment]]</tw-passagedata><tw-passagedata pid="6" name="Outside the pawnbroker&#39;s apartment" tags="" position="875,525" size="100,100">You reach the floor, stepping around some movers who are packing up the flat next door, and knock.
+
+Silence.
+
+Then the door cracks open, and a tiny, wrinkled woman with a hard glare looks you up and down and beckons you inside.
+
+[[Enter|Alyona Ivanovna]]</tw-passagedata><tw-passagedata pid="7" name="Alyona Ivanovna" tags="" position="875,575" size="100,100">This is Alyona Ivanovna, the old pawnbroker.  She is mean, stingy, suspicious, and quiet. She beats her sister, extorts her clients, and hoards away her money to be donated to a distant monestary when she dies—to buy her way into heaven.
+
+You&#39;re say you&#39;re here to sell your father&#39;s watch, his last gift before he died.
+
+You&#39;re really here to find out where she keeps her money. As she goes to fetch your payment, you hear an old strongbox in the next room click.
+
+You need to know if she lives alone. Dare you ask?
+
+[[Ask her.]]
+[[Stay silent.|Back outside]]</tw-passagedata><tw-passagedata pid="8" name="Ask her." tags="" position="875,700" size="100,100">//“Good-bye—are you always at home alone, your sister is not here with you?” He asked her as casually as possible as he went out into the passage.
+
+“What business is she of yours, my good sir?”
+
+“Oh, nothing particular, I simply asked. You are too quick.... Good-day, Alyona Ivanovna.” //&lt;sup&gt;2&lt;/sup&gt;
+
+(set:$Suspicion to $Suspicion + 1)
+&#39;&#39;Suspicion has increased by 1.&#39;&#39;
+
+[[Exit|Back outside]]</tw-passagedata><tw-passagedata pid="9" name="Back outside" tags="" position="1000,700" size="100,100">As soon as you leave, you almost collapse from stress and revulsion. Are you seriously considering this? Is she actually going to die at your hands?
+
+Are you really capable of murder?
+
+[[I need to go home.]]
+(if:(history: where its name contains &quot;The tavern&quot;)&#39;s length &lt; 1)[[ I need to eat something.|The tavern]]</tw-passagedata><tw-passagedata pid="10" name="Welcome" tags="" position="850,400" size="100,100">//“Do you understand, sir, do you understand what it means when you have absolutely nowhere to turn? For every man must have somewhere to turn....”//     
+ 
+ Welcome… to &#39;&#39;[[Saint Petersburg]].&#39;&#39;
+ 
+ (set: $Suspicion to 0)
+ (set: $Fever to 2)
+ (set: $Apathy to 1)
+</tw-passagedata><tw-passagedata pid="11" name="I need to go home." tags="" position="975,925" size="100,100">(if:(history: where its name contains &quot;Marmeladov&quot;)&#39;s length is 1)[The drunk man&#39;s words are still ringing in your ears: //“Do you understand, sir, do you understand what it means when you have absolutely nowhere to turn? For every man must have somewhere to turn....”//&lt;sup&gt;4&lt;/sup&gt;
+]
+(if:(history: where its name contains &quot;Alyona Ivanovna&quot;)&#39;s length is 1)[You&#39;re still shaken by what you&#39;ve done. What you might still do. You can&#39;t get the suspicious glare of the pawnbroker out of your mind.
+(set: $Fever to $Fever + 1)
+&#39;&#39;Fever has increased by 1.&#39;&#39;
+]
+(else:)[You came out to do a job. You&#39;ve returned, and nothing has changed. And you may go out again, and still nothing will change. (text-colour:#dbe500)[When you can&#39;t trust yourself to change, what else can?]
+(set: $Apathy to $Apathy + 1)
+&#39;&#39;Apathy has increased by 1.&#39;&#39;]
+
+
+
+[[There is a letter here for you.|The letter]]
+
+</tw-passagedata><tw-passagedata pid="12" name="A stranger" tags="" position="1325,750" size="100,100">//&quot;He was a man over fifty, bald and grizzled, of medium height, and stoutly built. His face, bloated from continual drinking, was of a yellow, even greenish, tinge, with swollen eyelids out of which keen reddish eyes gleamed like little chinks. But there was something very strange in him; there was a light in his eyes as though of intense feeling—perhaps there were even thought and intelligence, but at the same time there was a gleam of something like madness. He was wearing an old and hopelessly ragged black dress coat, with all its buttons missing except one, and that one he had buttoned, evidently clinging to this last trace of respectability. And there was something respectable and like an official about his manner too. But he was restless; he ruffled up his hair and from time to time let his head drop into his hands dejectedly resting his ragged elbows on the stained and sticky table. At last he looked straight at Raskolnikov, and said loudly and resolutely:
+
+&#39;May I venture, honoured sir, to engage you in polite conversation?&#39;&quot;//&lt;sup&gt;3&lt;/sup&gt;
+
+[[Talk to him.|Marmeladov]]
+[[Leave without a word.]]</tw-passagedata><tw-passagedata pid="13" name="Leave without a word." tags="" position="1125,675" size="100,100">(text-colour:#dbe500)[You have no friends, no allies, nobody who can comprehend your life.
+]
+(set: $Apathy to $Apathy + 1)
+&#39;&#39;Apathy has increased by 1.&#39;&#39;
+
+(if:(history: where its name contains &quot;Alyona Ivanovna&quot;)&#39;s length &lt; 1)[[I still have a job to do.|The apartment building]]
+[[I need to go home.]]</tw-passagedata><tw-passagedata pid="14" name="Marmeladov" tags="" position="1200,800" size="100,100">His name is Semyon Zaharovitch Marmeladov, a retired government clerk. He has drunk his impoverished family into squalor, leaving a wife half-mad with consumption and a daughter forced to go into sex work. But you can tell he doesn&#39;t fit in among this sordid crowd. Beneath his shabbiness and intoxication, there is an intelligent man longing for an intelligent friend.
+
+You help him get home.
+
+(set: $Apathy to $Apathy - 1)
+&#39;&#39;Apathy has been reduced by 1.&#39;&#39;
+
+(if:(history: where its name contains &quot;Alyona Ivanovna&quot;)&#39;s length &lt; 1)[[I still have a job to do.|The apartment building]]
+
+[[Time to head home.|I need to go home.]]</tw-passagedata><tw-passagedata pid="15" name="The letter" tags="" position="975,975" size="100,100">It&#39;s from your family! With shaky hands, you read your mother&#39;s slanting script.
+
+Your sister is home from serving as a governess to the Svidrigaïlov family—it seems Mr. Svidrigaïlov took an unsavory interest in her. But the lady of the house took pity on her, and has arranged for her to meet a new suitor:
+
+//&quot;He is a well-to-do man, to be depended upon, he has two posts in the government and has already made his fortune. It is true that he is forty-five years old, but he is of a fairly prepossessing appearance and might still be thought attractive by women, and he is altogether a very respectable and presentable man… And beware, dear Rodya, when he comes to Petersburg, as he shortly will do, beware of judging him too hastily and severely, as your way is, if there is anything you do not like in him at first sight. …For instance, at his second visit, after he had received Dounia’s consent, in the course of conversation, he declared that before making Dounia’s acquaintance, he had made up his mind to marry a girl of good reputation, without dowry and, above all, one who had experienced poverty, because, as he explained, a man ought not to be indebted to his wife, but that it is better for a wife to look upon her husband as her benefactor. I must add that he expressed it more nicely and politely than I have done, for I have forgotten his actual phrases and only remember the meaning.
+
+Oh, with what happiness I shall press you to my heart! Dounia is all excitement at the joyful thought of seeing you, she said one day in joke that she would be ready to marry Pyotr Petrovitch for that alone. She is an angel!
+
+…I would send you more, but I am uneasy about our travelling expenses; for though Pyotr Petrovitch has been so kind as to undertake part of the expenses of the journey, that is to say, he has taken upon himself the conveyance of our bags and big trunk (which will be conveyed through some acquaintances of his), we must reckon upon some expense on our arrival in Petersburg, where we can’t be left without a halfpenny, at least for the first few days. …Good-bye, till we meet then—I embrace you warmly, warmly, with many kisses.
+
+“Yours till death,
+
+“PULCHERIA RASKOLNIKOV.” //&lt;sup&gt;5&lt;/sup&gt;
+
+You collapse in despair.
+
+[[Next|This is bad]]</tw-passagedata><tw-passagedata pid="16" name="This is bad" tags="" position="975,1000" size="100,100">However your mother may try to disguise it, you see what&#39;s going on here. They know you can&#39;t afford your tuition. They know her pension won&#39;t be enough once mother gets too old to take care of herself.
+
+Your sister has resigned herself to marry a rotten man to save you, and there&#39;s nothing you can do about it.
+(if:$Apathy &lt; 3)[
+…No. There is something.
+	(if:(history: where its name contains &quot;Marmeladov&quot;)&#39;s length &gt;= 1)[[Marmeladov. He needs me.]]
+	(if:$Apathy &lt; 1 and (history: where its name contains &quot;At Razumihin&#39;s&quot;)&#39;s length &lt; 1)[ [[I have a friend in the city.]]](else:)[(text-colour:grey)[~~I have a friend in the city.~~]  &#39;&#39;Your apathy is too high for this option.&#39;&#39;]
+[[I can carry out the job.]]
+]
+(else:)[
+[[Your apathy overwhelms you.]]
+]</tw-passagedata><tw-passagedata pid="17" name="Your apathy overwhelms you." tags="" position="1325,950" size="100,100">//&quot;But since I grew to manhood, I have for some unknown reason become calmer, though I realised my awful characteristic more fully every year. I say &quot;unknown,&quot; for to this day I cannot tell why it was. Perhaps it was owing to the terrible misery that was growing in my soul through something which was of more consequence than anything else about me: that something was the conviction that had come upon me that nothing in the world mattered. I had long had an inkling of it, but the full realisation came last year almost suddenly. I suddenly felt that it was all the same to me whether the world existed or whether there had never been anything at all: I began to feel with all my being that there was nothing existing. At first I fancied that many things had existed in the past, but afterwards I guessed that there never had been anything in the past either, but that it had only seemed so for some reason. Little by little I guessed that there would be nothing in the future either. Then I left off being angry with people and almost ceased to notice them. Indeed this showed itself even in the pettiest trifles: I used, for instance, to knock against people in the street. And not so much from being lost in thought: what had I to think about? I had almost given up thinking by that time; nothing mattered to me. If at least I had solved my problems! Oh, I had not settled one of them, and how many they were! But I gave up caring about anything, and all the problems disappeared.&quot;//&lt;sup&gt;7&lt;/sup&gt;
+—The Dream of a Ridiculous Man
+
+&#39;&#39;Your story has come to an end.&#39;&#39;
+[[Begin again.]]</tw-passagedata><tw-passagedata pid="18" name="Begin again." tags="" position="1475,1725" size="100,100">(reload:)</tw-passagedata><tw-passagedata pid="19" name="Marmeladov. He needs me." tags="" position="950,1150" size="100,100">It doesn&#39;t take much searching to turn up one Semyon Zaharovitch Marmeladov. He lives not far from here, and he&#39;s the subject of enough mockery around the taverns that it&#39;s easy to find someone who knows him.
+
+You almost wish it were harder, because your stomach turns at the thought of meeting another.
+
+[[Swallow the nausea and press on.]]
+[[I need to reassess. |This is bad]]</tw-passagedata><tw-passagedata pid="20" name="I can carry out the job." tags="" position="775,1000" size="100,100">Alyona Ivanovna. A pawnbroker. A strongbox of valuables. A hateful parasite upon the world. You. An axe from the porter downstairs. A fake trinket to present her a distraction.
+
+All you need to do is find the opportunity to strike.
+
+[[Wait.]]</tw-passagedata><tw-passagedata pid="21" name="I have a friend in the city." tags="" position="1300,1075" size="100,100">Dmitri Prokofitch Razumihin—the closest thing you had to a friend at law school. You remember him now…
+
+//&quot;He was an exceptionally good-humoured and candid youth, good-natured to the point of simplicity, though both depth and dignity lay concealed under that simplicity. The better of his comrades understood this, and all were fond of him. He was extremely intelligent, though he was certainly rather a simpleton at times. He was of striking appearance—tall, thin, blackhaired and always badly shaved. He was sometimes uproarious and was reputed to be of great physical strength. One night, when out in a festive company, he had with one blow laid a gigantic policeman on his back. There was no limit to his drinking powers, but he could abstain from drink altogether; he sometimes went too far in his pranks; but he could do without pranks altogether. Another thing striking about Razumihin, no failure distressed him, and it seemed as though no unfavourable circumstances could crush him. He could lodge anywhere, and bear the extremes of cold and hunger. He was very poor, and kept himself entirely on what he could earn by work of one sort or another. He knew of no end of resources by which to earn money. He spent one whole winter without lighting his stove, and used to declare that he liked it better, because one slept more soundly in the cold. For the present he, too, had been obliged to give up the university, but it was only for a time, and he was working with all his might to save enough to return to his studies again.//&lt;sup&gt;8&lt;/sup&gt;
+
+But you don&#39;t know what Razumihin could do to help you—and you loathe the idea of confiding in another person. A flash of fury against your old colleague surges up in you.
+
+[[This was a mistake.|This is bad]]
+[[Swallow your pride.|At Razumihin&#39;s]]</tw-passagedata><tw-passagedata pid="22" name="At Razumihin&#39;s" tags="" position="1475,1125" size="100,100">Razumihin lives in an attic apartment even more cramped and impoverished than yours, but it is clean and orderly. He sits at his desk, writing furiously, when you enter. He looks up, shocked, then splits into a wide grin. &quot;It is you! Dressed like that, you&#39;ve had a hard time of it too. Come sit down, brother—you are tired, I&#39;ll be bound.&quot;
+
+Revulsion spreads through your body.
+(set: $Fever to $Fever + 1) &#39;&#39;Fever has increased by 1.&#39;&#39;
+
+Razumihin has stopped smiling. //&quot;Why, you are seriously ill, do you know that?&quot;//&lt;sup&gt;9&lt;/sup&gt; 
+
+He tries to take your pulse.
+
+[[Push him away.]]
+[[Open up.]]
+</tw-passagedata><tw-passagedata pid="23" name="Push him away." tags="" position="1300,1225" size="100,100">// Raskolnikov got up from the sofa. As he had mounted the stairs to Razumihin’s, he had not realised that he would be meeting his friend face to face. Now, in a flash, he knew, that what he was least of all disposed for at that moment was to be face to face with anyone in the wide world. His spleen rose within him. He almost choked with rage at himself as soon as he crossed Razumihin’s threshold.
+
+“Good-bye,” he said abruptly, and walked to the door.
+
+“Stop, stop! You queer fish.”
+
+“I don’t want to,” said the other, again pulling away his hand.
+
+“Then why the devil have you come? Are you mad, or what? Why, this is... almost insulting! I won’t let you go like that.”
+
+“Well, then, I came to you because I know no one but you who could help... to begin... because you are kinder than anyone—cleverer, I mean, and can judge... and now I see that I want nothing. Do you hear? Nothing at all... no one’s services... no one’s sympathy. I am by myself... alone. Come, that’s enough. Leave me alone.” //&lt;sup&gt;10&lt;/sup&gt;
+
+(set: $Apathy to $Apathy + 1)&#39;&#39;Apathy has increased by 1.&#39;&#39;
+
+[[Exit.]]</tw-passagedata><tw-passagedata pid="24" name="Open up." tags="" position="1625,1200" size="100,100">Once you finally will yourself to do it, the words come tumbling out all at once. The weeks of little food and no lessons. The heat, the stench, the confinement of your apartment. The letter. The theory that&#39;s been torturing you for weeks… the thoughts you can&#39;t get out of your head.
+
+Razumihin listens. He doesn&#39;t interrupt, doesn&#39;t flinch, doesn&#39;t shout or gasp. It is the stillest you have ever seen him. Which is good, because he&#39;s there to catch you when you black out.
+
+[[Next]]</tw-passagedata><tw-passagedata pid="25" name="Exit." tags="" position="1300,1250" size="100,100">You stumble out of Razumihin&#39;s garret. If you needed to come back, he would welcome you with open arms. You know you will never return.
+
+[[What do I do?|This is bad]]</tw-passagedata><tw-passagedata pid="26" name="Next" tags="" position="1625,1225" size="100,100">(after:1s)[Your dreams are disturbed.]
+(after:3s)[Nonsensical.]
+(after:5s)[Feverish.]
+(after:7s)[…]
+(after:9s)[…]
+(after:11s)[…]
+(after:13s)[ [[You awaken.]]]
+</tw-passagedata><tw-passagedata pid="27" name="You awaken." tags="" position="1625,1250" size="100,100">You&#39;re still on Razumihin&#39;s ragged sofa. But there is warm soup and tea waiting for you, a blanket over your shivering form, a doctor friend that Razumihin knows. Razumihin is delighted to see you up, helps you eat, bustles about arranging checkups with the doctor and a safe way to get you home. He&#39;s animated about some business venture he wants to let you in on, translating German texts into Russian and getting into publishing.
+
+&quot;//You always maintained that I was a fool, but by Jove, my boy, there are greater fools than I am!//&lt;sup&gt;11&lt;/sup&gt; There&#39;s a fortune to be made here, brother—a humble fortune, but enough for you and me if we work together! We&#39;ll sort things out with your family when they come to Petersburg, make our way one way or another. But enough! Enough! I&#39;m being foolish. What you need now is rest and food and companionship. These ideas circulating in your head, brother… very unsettling. You could have gone down a very dark path if you&#39;d taken them too seriously! But Zossimov here is a doctor, and we both agree it all stems from your fever and poor conditions. Fresh air, brother, that&#39;s what you need. Don&#39;t worry yourself! Your friends will take care of you.&quot;
+
+For the first time in such a long while, you are grateful.
+
+&#39;&#39;You have reached an ending… for now.&#39;&#39;
+[[Begin again.]]
+</tw-passagedata><tw-passagedata pid="28" name="Wait." tags="" position="650,1000" size="100,100">You wander the streets of Petersburg, not sure what you&#39;re looking for.
+[[Keep your head down.|Wait 2.]]</tw-passagedata><tw-passagedata pid="29" name="Wait 2." tags="" position="650,1025" size="100,100">The smallest mistake could ruin you.
+[[Keep your ears open.|Wait 3]]</tw-passagedata><tw-passagedata pid="30" name="Wait 3" tags="" position="650,1050" size="100,100">You feel sick and hungry.
+(if:$Fever &gt; 2)[Your fever has grown intense, and you struggle to keep control of your own mind.
+[[Keep it together.|Wait 4 - sick]]](else:)[But you&#39;ve kept your &#39;&#39;Fever&#39;&#39; in check.
+[[Keep it together.|Wait 4 - sane]]]</tw-passagedata><tw-passagedata pid="31" name="Wait 4 - sane" tags="" position="575,1175" size="100,100">Well done.
+
+[[Next|Wait 5 - sane]]</tw-passagedata><tw-passagedata pid="32" name="Wait 4 - sick" tags="" position="725,1175" size="100,100">//…He was a child about seven years old, walking into the country with his father on the evening of a holiday. It was a grey and heavy day, the country was exactly as he remembered it; indeed he recalled it far more vividly in his dream than he had done in memory. The little town stood on a level flat as bare as the hand, not even a willow near it; only in the far distance, a copse lay, a dark blur on the very edge of the horizon…//&lt;sup&gt;12&lt;/sup&gt;
+
+[[Next.|Wait 5 - sick]]</tw-passagedata><tw-passagedata pid="33" name="Wait 5 - sick" tags="" position="725,1200" size="100,100">//Near the tavern the road became a dusty track, the dust of which was always black.//&lt;sup&gt;13&lt;/sup&gt;
+Are you awake?
+
+[[Next.|Wait 6 - sick]]</tw-passagedata><tw-passagedata pid="34" name="Wait 6 - sick" tags="" position="725,1225" size="100,100">// “Get in, get in!” shouted one of them, a young thick-necked peasant with a fleshy face red as a carrot. “I’ll take you all, get in!”//&lt;sup&gt;14&lt;/sup&gt;
+
+You&#39;ve walked these streets up and down a dozen times. You have no plans. You have no information. There&#39;s nothing in Petersburg for you.
+
+[[Nothing.|Wait 7 - sick]]</tw-passagedata><tw-passagedata pid="35" name="Wait 7 - sick" tags="" position="725,1250" size="100,100">Your mother. Your sister. What&#39;s next?
+
+//With the cry of “now,” the mare tugged with all her might, but far from galloping, could scarcely move forward; she struggled with her legs, gasping and shrinking from the blows of the three whips which were showered upon her like hail. //&lt;sup&gt;15&lt;/sup&gt;
+
+Do you care?
+
+//The laughter in the cart and in the crowd was redoubled, but Mikolka flew into a rage and furiously thrashed the mare, as though he supposed she really could gallop. //&lt;sup&gt;16&lt;/sup&gt;
+
+Does anyone?
+
+//“He’ll crush her,” was shouted round him. “He’ll kill her!”
+
+“It’s my property,” shouted Mikolka and brought the shaft down with a swinging blow.//&lt;sup&gt;17&lt;/sup&gt;
+
+[[Mine.|Wait 8 - sick]]</tw-passagedata><tw-passagedata pid="36" name="Wait 8 - sick" tags="" position="725,1275" size="100,100">[[…|Wait 9 - sick]]</tw-passagedata><tw-passagedata pid="37" name="Wait 9 - sick" tags="" position="725,1300" size="100,100">[[…|Wait 10 - sick]]</tw-passagedata><tw-passagedata pid="38" name="Wait 10 - sick" tags="" position="725,1325" size="100,100">[[You are wandering through the Hay Market.]]</tw-passagedata><tw-passagedata pid="39" name="You are wandering through the Hay Market." tags="" position="600,1350" size="100,100">You overhear a conversation with Lizaveta and a peddler in the street.
+
+Lizaveta—the pawnbroker&#39;s sister—will be out of the apartment at 7 tonight.
+
+The pawnbroker will be alone.
+
+Just like that.
+
+[[Prepare.]]</tw-passagedata><tw-passagedata pid="40" name="Wait 5 - sane" tags="" position="575,1200" size="100,100">But that&#39;s the funny thing about progress.
+
+[[Next|Wait 6 - sane]]</tw-passagedata><tw-passagedata pid="41" name="Wait 6 - sane" tags="" position="575,1225" size="100,100">(text-colour:#dbe500)[It has a way of undoing itself out of spite.]
+
+(set: $Fever to 2)&#39;&#39;Fever has been reset to 2.&#39;&#39;
+
+[[You sleep.|Wait 4 - sick]]</tw-passagedata><tw-passagedata pid="42" name="Prepare." tags="" position="600,1400" size="100,100">You fight the fever, try to get things ready. You need… what do you need?
+
+(text-colour:grey)[~~Go through the plan.~~] &#39;&#39;Your Fever is too high for this.&#39;&#39;
+(text-colour:grey)[~~Leap into action.~~] &#39;&#39;Your Apathy is too high for this.&#39;&#39;
+(text-colour:grey)[~~Give in.~~] &#39;&#39;Your Apathy is too low for this.&#39;&#39;
+[[Scramble to get everything together.]]</tw-passagedata><tw-passagedata pid="43" name="Scramble to get everything together." tags="" position="600,1425" size="100,100">You fashion a crude loop of cloth within your jacket, and suspend the axe taken from the porter&#39;s room. You can carry it safely to the old woman&#39;s house like this, presuming no one spots you.
+
+Then you pass out.
+
+[[There are two types of people in the world.]]</tw-passagedata><tw-passagedata pid="44" name="There are two types of people in the world." tags="" position="600,1475" size="100,100">Time passes.
+
+[[Great men, and ordinary men.]]</tw-passagedata><tw-passagedata pid="45" name="Great men, and ordinary men." tags="" position="600,1525" size="100,100">When you awake, you wrap up the false &quot;pledge&quot;—a piece of wood, a strip of metal, nice white paper, string in a difficult knot. Just enough to catch her attention.
+
+[[Ordinary men follow their morality. As they should.]]</tw-passagedata><tw-passagedata pid="46" name="Ordinary men follow their morality. As they should." tags="" position="600,1550" size="100,100">You begin the walk outside. You&#39;re pale, sweaty. There&#39;s a ringing in your ears.
+
+You begin to count the steps.
+
+[[But great men are here to do great things.]]</tw-passagedata><tw-passagedata pid="47" name="But great men are here to do great things." tags="" position="775,1575" size="100,100">47… 101… 199…
+
+[[If Napoleon had been afraid of stepping on morality&#39;s toes, would he have conquered the world?]]</tw-passagedata><tw-passagedata pid="48" name="If Napoleon had been afraid of stepping on morality&#39;s toes, would he have conquered the world?" tags="" position="775,1625" size="100,100">373… 467… 547…
+
+[[If fate required Newton to kill thousands to spread his light, would he have hesitated?]]</tw-passagedata><tw-passagedata pid="49" name="If fate required Newton to kill thousands to spread his light, would he have hesitated?" tags="" position="775,1675" size="100,100">673… 701… 709… 719… 727…
+
+730.
+
+[[Time to be great.]]</tw-passagedata><tw-passagedata pid="50" name="Time to be great." tags="" position="650,1700" size="100,100">As you ascend the stairs to the pawnbroker&#39;s apartment, you realize you&#39;ve forgotten to wear anything to hide your appearance. No change in your hat, overcoat, nothing. If your fever was lower, you might&#39;ve prepared better.
+
+(set: $Suspicion to $Suspicion + 1)&#39;&#39;Suspicion has increased by 1.&#39;&#39;
+
+You knock, quaveringly. The door opens a crack, then swings wide. (set: $DoorLocked to False)
+
+[[Go in.]]</tw-passagedata><tw-passagedata pid="51" name="Go in." tags="" position="650,1825" size="100,100">//Good evening, Alyona Ivanovna,” he began, trying to speak easily, but his voice would not obey him, it broke and shook. “I have come... I have brought something... but we’d better come in... to the light....”
+
+And leaving her, he passed straight into the room uninvited. The old woman ran after him; her tongue was unloosed.
+
+“Good heavens! What it is? Who is it? What do you want?”
+
+“Why, Alyona Ivanovna, you know me... Raskolnikov... here, I brought you the pledge I promised the other day...” And he held out the pledge.
+
+The old woman glanced for a moment at the pledge, but at once stared in the eyes of her uninvited visitor. She looked intently, maliciously and mistrustfully. A minute passed; he even fancied something like a sneer in her eyes, as though she had already guessed everything.// 
+
+(set: $Suspicion to $Suspicion + 1)&#39;&#39;Suspicion has increased by 1.&#39;&#39;
+(set: $Fever to $Fever + 1)&#39;&#39;Fever has increased by 1.&#39;&#39;
+
+//He felt that he was losing his head, that he was almost frightened, so frightened that if she were to look like that and not say a word for another half minute, he thought he would have run away from her. //&lt;sup&gt;18&lt;/sup&gt;
+
+[[Give her the pledge.]]
+[[Run while you still have time.|Chide]]
+[[Scream.|Chide]]
+[[Fall to your knees and beg for it to be over.|Chide]]</tw-passagedata><tw-passagedata pid="52" name="Chide" tags="" position="525,1875" size="100,100">(text-colour:#dbe500)[Now, now… there&#39;s no backing down from greatness, is there?
+
+Did you really think you had a choice?]
+
+(set: $Apathy to $Apathy + 1)&#39;&#39;Apathy has been increased by 1.&#39;&#39;
+
+[[Give her the pledge.]] </tw-passagedata><tw-passagedata pid="53" name="Give her the pledge." tags="" position="650,1950" size="100,100">// “But why, my good sir, all of a minute.... What is it?” she asked, looking at the pledge.
+
+“The silver cigarette case; I spoke of it last time, you know.”
+
+She held out her hand.
+
+“But how pale you are, to be sure... and your hands are trembling too? Have you been bathing, or what?”
+
+“Fever,” he answered abruptly. “You can’t help getting pale... if you’ve nothing to eat,” he added, with difficulty articulating the words.
+
+His strength was failing him again. But his answer sounded like the truth; the old woman took the pledge.
+
+“What is it?” she asked once more, scanning Raskolnikov intently, and weighing the pledge in her hand.
+
+“A thing... cigarette case.... Silver.... Look at it.”
+
+“It does not seem somehow like silver.... How he has wrapped it up!”
+
+Trying to untie the string and turning to the window, to the light (all her windows were shut, in spite of the stifling heat), she left him altogether for some seconds and stood with her back to him…
+
+[[He unbuttoned his coat and freed the axe from the noose.]]//&lt;sup&gt;19&lt;/sup&gt;
+
+</tw-passagedata><tw-passagedata pid="54" name="He unbuttoned his coat and freed the axe from the noose." tags="" position="750,2075" size="100,100">//The old woman was as always bareheaded. Her thin, light hair, streaked with grey, thickly smeared with grease, was plaited in a rat’s tail and fastened by a broken horn comb which stood out on the nape of her neck. As she was so short, the blow fell on the very top of her skull. She cried out, but very faintly, and suddenly sank all of a heap on the floor, raising her hands to her head. In one hand she still held “the pledge.” Then he dealt her another and another blow with the blunt side and on the same spot. The blood gushed as from an overturned glass, the body fell back. He stepped back, let it fall, and at once bent over her face; she was dead. Her eyes seemed to be starting out of their sockets, the brow and the whole face were drawn and contorted convulsively. //&lt;sup&gt;20&lt;/sup&gt;
+
+Suddenly, clarity returns.
+
+(set: $Fever to 0)&#39;&#39;Fever has been reduced to 0.&#39;&#39;
+(set: $Apathy to 0)&#39;&#39;Apathy has been reduced to 0.&#39;&#39;
+&#39;&#39;Mercy has been reduced to 0.&#39;&#39;
+
+A ring of keys spill out of her pocket. Time is short.
+
+[[Search the bedroom.]]
+[[Check the body.]]
+[[Examine the room around you.]]
+</tw-passagedata><tw-passagedata pid="55" name="Search the bedroom." tags="" position="875,2175" size="100,100">You snag the ring of keys from the floor and rush into the bedroom. Bed, shrine, chest of drawers. You rush for the latter and start trying the locks.
+
+None of the keys work.(if:$KeyFound is true)[And the key you got from the body is much too large.]
+
+Why don&#39;t the keys work?
+
+&#39;&#39;Time is running short.&#39;&#39;
+
+[[Keep searching the room.]](if:$KeyFound is false)[
+[[Check the body.]]]
+[[Get out of here.|You escape.]]
+</tw-passagedata><tw-passagedata pid="56" name="Check the body." tags="" position="700,2300" size="100,100">A piece of her skull has caved in, and blood is pouring from the blunt wound. You&#39;re as careful as can be, but can&#39;t avoid a dark crimson stain on some of your clothes.
+
+(set: $Suspicion to $Suspicion + 5)&#39;&#39;Suspicion has been increased by 5.&#39;&#39;
+
+There is a rough blue string around her neck. You struggle for—how long?—to snap it and grab an overstuffed purse and a large notched key.
+
+(if:(history: where its name contains &quot;Search the bedroom.&quot;)&#39;s length &gt;= 1)[[[You hear a gasp from behind you.|Lizaveta]]](else:)[ [[Examine the room around you.]]
+[[Search the bedroom.]]]</tw-passagedata><tw-passagedata pid="57" name="Examine the room around you." tags="" position="600,2150" size="100,100">Yellowed wallpaper, musty wooden furniture, tightly shuttered windows despite the sweltering heat, a threadbare rug. And the door is open.
+
+It has been all this time.
+
+(set: $Suspicion to $Suspicion + 3)&#39;&#39;Suspicion has increased by 3.&#39;&#39;
+
+You rush to close and latch it. (set: $DoorLocked to True) Why are your hands shaking so much?
+
+[[Search the bedroom.]] 
+[[Check the body.]] </tw-passagedata><tw-passagedata pid="58" name="Keep searching the room." tags="" position="975,2275" size="100,100">Nothing behind the chest of drawers, nothing in the shrine—wait, under the bed. A strongbox. The big key fits.
+
+Dozens of pledges in silver and gold come spilling out. You stuff your pockets as quickly as you can and rush back into the main room.
+
+(if: $DoorLocked is true)[ [[There is a knock on the door.]]](else:)[[You hear a gasp.|Lizaveta]]</tw-passagedata><tw-passagedata pid="59" name="There is a knock on the door." tags="" position="900,2475" size="100,100">It&#39;s polite at first. Then it grows heavier, more insistent. Someone is saying something on the other side, but what it is you have no idea. You can&#39;t hear anything but a muffled ringing in the distance. This should probably concern you, but the thought slips through your mind in an instant and leaves you blank.
+
+Then you hear:
+
+//“Stay! Do you see how the door shakes if you pull it?”
+
+“Well?”
+
+“That shows it’s not locked, but fastened with the hook! Do you hear how the hook clanks?”
+
+“Well?”
+
+“Why, don’t you see? That proves that one of them is at home. If they were all out, they would have locked the door from the outside with the key and not with the hook from inside. There, do you hear how the hook is clanking? To fasten the hook on the inside they must be at home, don’t you see. So there they are sitting inside and don’t open the door! There must be something wrong…” //&lt;sup&gt;21&lt;/sup&gt;
+
+[[You&#39;re trapped.]]</tw-passagedata><tw-passagedata pid="60" name="Lizaveta" tags="" position="1025,2375" size="100,100">The door is open. The pawnbroker opened it, and you never closed it. In your hurry, you completely forgot to check.
+
+Lizaveta. Lizaveta is here, staring at the body of her murdered sister. Her eyes are very round, and her lips are trembling. She begins to back away, whimpering, when she sees you, raising one hand in front of her, palm out, between you and her.
+
+[[Kill her.]]</tw-passagedata><tw-passagedata pid="61" name="Kill her." tags="" position="1050,2500" size="100,100">The axe comes down clean. It&#39;s the sharp edge this time. Her skull splits open in an instant and she falls to the floor.
+
+You hear footsteps on the landing and bolt to shut the door and lock it.
+
+You are very still. You pray the footsteps will pass.
+
+They don&#39;t.
+
+[[There is a knock on the door.]] </tw-passagedata><tw-passagedata pid="62" name="You&#39;re trapped." tags="" position="900,2600" size="100,100">You wait for what feels like an eternity. One of the people moves off downstairs, asking the other to guard the door. He grumbles as time passes… and his grumblings grow more frequent, more agitated. He bangs on the door repeatedly.
+
+You prepare for the worst.
+
+Then he stalks off downstairs, shouting at what the devil the other is doing.
+
+[[You escape.]]</tw-passagedata><tw-passagedata pid="63" name="You escape." tags="" position="800,2725" size="100,100">The murderer escapes, but not cleanly. His fever and his tortured psyche betray him again and again. A family bound by the clutches of a terrible suitor, an old enemy on the move, a dear friend to meet a grisly end, and a terrible choice all loom over Raskolnikov as Petersburg&#39;s most cunning detective begins to unravel his mind from the inside out.
+
+This… is &#39;&#39;Crime and Punishment.&#39;&#39;
+
+Thank you for playing.
+
+[[Begin again.]] </tw-passagedata><tw-passagedata pid="64" name="Swallow the nausea and press on." tags="" position="950,1275" size="100,100">(set: $Fever to $Fever + 1)&#39;&#39;Fever has increased by 1.&#39;&#39;
+
+//A grimy little door at the very top of the stairs stood ajar. A very poor-looking room about ten paces long was lighted up by a candle-end; the whole of it was visible from the entrance. It was all in disorder, littered up with rags of all sorts, especially children’s garments. Across the furthest corner was stretched a ragged sheet. Behind it probably was the bed. There was nothing in the room except two chairs and a sofa covered with American leather, full of holes, before which stood an old deal kitchen-table, unpainted and uncovered. At the edge of the table stood a smoldering tallow-candle in an iron candlestick. It appeared that the family had a room to themselves, not part of a room, but their room was practically a passage. The door leading to the other rooms, or rather cupboards, into which Amalia Lippevechsel’s flat was divided stood half open, and there was shouting, uproar and laughter within. People seemed to be playing cards and drinking tea there. Words of the most unceremonious kind flew out from time to time.//&lt;sup&gt;6&lt;/sup&gt;
+
+Marmeladov is there, lying in a corner, while his young wife, coughing and flushed, manically paces back and forth, shouting at the children.
+
+But they both stop in shock when they see you.
+
+[[&quot;I&#39;m here to help.&quot;]]</tw-passagedata><tw-passagedata pid="65" name="&quot;I&#39;m here to help.&quot;" tags="" position="950,1400" size="100,100">You don&#39;t know what you can do, being nearly as poor as them yourself. You don&#39;t have any money or even a plan. You don&#39;t care. You&#39;ll figure it out.
+
+Outside your university, this is the first man who&#39;s shown intelligence and kindness to you. You intend to return the favor.
+
+&#39;&#39;You have reached an ending… for now.&#39;&#39;
+[[Begin again.]] </tw-passagedata></tw-storydata>
+
+
+</body>
+</html>
